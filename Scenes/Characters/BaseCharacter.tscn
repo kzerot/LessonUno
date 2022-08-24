@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ct2trt12i0jpl"]
+
+[ext_resource type="Script" path="res://Scenes/Characters/Character.gd" id="1_ie65y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_laxoa"]
+size = Vector2(16, 8)
+
+[node name="Character" type="CharacterBody2D"]
+texture_filter = 1
+script = ExtResource("1_ie65y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_laxoa")
+
+[node name="Image" type="Sprite2D" parent="."]
+offset = Vector2(0, -16)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

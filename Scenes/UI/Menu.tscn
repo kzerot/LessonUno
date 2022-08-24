@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://dc43ktb2jb8f5"]
+
+[ext_resource type="Script" path="res://Scenes/UI/Menu.gd" id="1_adece"]
+
+[node name="Menu" type="Control"]
+texture_filter = 1
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_adece")
+
+[node name="StartGame" type="Button" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -48.0
+offset_top = -15.5
+offset_right = 48.0
+offset_bottom = 15.5
+text = "Start Game"
+
+[connection signal="pressed" from="StartGame" to="." method="_on_start_game_pressed"]

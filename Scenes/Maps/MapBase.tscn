@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfsh2ppwfyqa2"]
+
+[ext_resource type="Script" path="res://Scenes/Maps/Map.gd" id="1_3w8rg"]
+[ext_resource type="Script" path="res://Scripts/Camera.gd" id="2_xq3fr"]
+
+[node name="MapBase" type="Node2D"]
+texture_filter = 1
+y_sort_enabled = true
+script = ExtResource("1_3w8rg")
+
+[node name="Characters" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Environment" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="Camera" type="Camera2D" parent="."]
+current = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+script = ExtResource("2_xq3fr")
+
+[node name="Entries" type="Node2D" parent="."]

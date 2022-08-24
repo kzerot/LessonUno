@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://brxwfjurh07ir"]
+
+[ext_resource type="PackedScene" uid="uid://f48tn527ea6f" path="res://Scenes/Characters/PlayerControlled.tscn" id="1_s2n0e"]
+[ext_resource type="Texture2D" uid="uid://bktg2ixptn50" path="res://Raw/Characters/Wizzard.png" id="2_aq4nt"]
+
+[sub_resource type="Animation" id="Animation_vcrju"]
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Image:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_neaeo"]
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Image:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [5, 6, 7, 8]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j81xy"]
+_data = {
+"Idle": SubResource("Animation_vcrju"),
+"Run": SubResource("Animation_neaeo")
+}
+
+[node name="Character" instance=ExtResource("1_s2n0e")]
+character_data = "res://Raw/Characters/Wizzard.json"
+
+[node name="Image" parent="." index="1"]
+texture = ExtResource("2_aq4nt")
+hframes = 4
+vframes = 4
+frame = 6
+
+[node name="AnimationPlayer" parent="." index="2"]
+libraries = {
+"Main": SubResource("AnimationLibrary_j81xy")
+}

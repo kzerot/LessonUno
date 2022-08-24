@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3 uid="uid://biupka5cptxiy"]
+
+[ext_resource type="PackedScene" uid="uid://dfsh2ppwfyqa2" path="res://Scenes/Maps/MapBase.tscn" id="1_5rm6n"]
+[ext_resource type="PackedScene" uid="uid://bri7o017u4x7j" path="res://Scenes/Environment/Nature/Tree.tscn" id="2_d58cc"]
+
+[node name="MapBase" instance=ExtResource("1_5rm6n")]
+
+[node name="Enviropment@Tree" parent="Environment" index="0" instance=ExtResource("2_d58cc")]
+position = Vector2(-32, -41)
+
+[node name="Enviropment@Tree2" parent="Environment" index="1" instance=ExtResource("2_d58cc")]
+position = Vector2(33, -29)
+
+[node name="Tree" parent="Environment" index="2" instance=ExtResource("2_d58cc")]
+position = Vector2(-66, 43)
+
+[node name="Tree2" parent="Environment" index="3" instance=ExtResource("2_d58cc")]
+position = Vector2(109, 32)
+
+[node name="Tree3" parent="Environment" index="4" instance=ExtResource("2_d58cc")]
+position = Vector2(-64, -97)
+
+[node name="Tree4" parent="Environment" index="5" instance=ExtResource("2_d58cc")]
+position = Vector2(109, -101)
+
+[node name="Tree5" parent="Environment" index="6" instance=ExtResource("2_d58cc")]
+position = Vector2(81, 104)
+
+[node name="Tree6" parent="Environment" index="7" instance=ExtResource("2_d58cc")]
+position = Vector2(-139, -63)
+
+[node name="Tree7" parent="Environment" index="8" instance=ExtResource("2_d58cc")]
+position = Vector2(-139, 83)
+
+[node name="Main" type="Position2D" parent="Entries" index="0"]
+position = Vector2(-72, -21)

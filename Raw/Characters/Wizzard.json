@@ -1,0 +1,10 @@
+{
+	"rows": 4,
+	"cols": 4,
+	"animations": [
+		{"name": "Idle", "start_frame": 0, "end_frame": 4, "loop": true},
+		{"name": "Run", "start_frame": 5, "end_frame": 8, "loop": true}
+	],
+	"name": "Wizzard",
+	"texture": "res://Raw/Characters/Wizzard.png"
+}
