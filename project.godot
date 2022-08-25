@@ -64,7 +64,7 @@ window/size/viewport_height=320
 window/size/window_width_override=1200
 window/size/window_height_override=700
 window/vsync/vsync_mode=0
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
 [input]

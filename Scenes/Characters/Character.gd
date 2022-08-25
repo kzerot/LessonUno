@@ -18,6 +18,7 @@ var character_data :
 				printerr("Can't parse json! ", value)
 				printerr(json.get_error_line())
 				printerr(json.get_error_message())
+			file.close()
 		else:
 			printerr("Can't open json! ", value)
 	get:
